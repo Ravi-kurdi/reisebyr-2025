@@ -36,5 +36,63 @@
         </nav>
       </section>
     </header>
+
+    <main>
+      <form>
+        <nav>
+          <a href="#" class="active"
+            ><i class="fas fa-suitcase"></i> Fly + Hotell</a
+          >
+          <a href="#"><i class="fas fa-plane"></i> Fly</a>
+          <a href="#"><i class="fa-solid fa-city"></i> Storby</a>
+          <a href="#"><i class="fas fa-skiing"></i> Ski</a>
+          <a href="#"
+            ><i class="fa-solid fa-map-location"></i>Kombinasjonsreiser</a
+          >
+        </nav>
+        <br />
+
+        <section>
+          <label>
+            Fra
+            <select>
+              <option value="oslo">Oslo Lufthavn</option>
+              <option value="torp">Torp Sandefjord Lufthavn</option>
+              <option value="bergen">Bergen Lufthavn</option>
+              <option value="alta">Alta Lufthavn</option>
+            </select>
+          </label>
+          <label>
+            Til
+            <select>
+              <option value="albania" selected>Albania</option>
+              <option value="danmark" selected>Danmark</option>
+              <option value="finland" selected>Finland</option>
+              <option value="hellas" selected>Hellas</option>
+            </select>
+          </label>
+          <label>
+            Reiselengde
+            <select>
+              <option value="mindre enn 1 uke" selected>
+                Mindre enn 1 uke
+              </option>
+              <option value="1 uke" selected>1 uke</option>
+              <option value="2 uker" selected>2 uker</option>
+              <option value="mer enn 2 uker" selected>Mer enn 2 uker</option>
+            </select>
+          </label>
+          <label>
+            Velg dato
+            <input type="date" placeholder="mm/dd/yyyy" />
+          </label>
+          <label>
+            Antall reisende
+            <input type="number" value="2" min="1" />
+          </label>
+          <button type="submit">Søk</button>
+        </section>
+      </form>
+    </main>
   </body>
 </html>
