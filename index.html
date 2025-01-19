@@ -18,123 +18,139 @@
   <body>
     <header>
       <section>
-        <a href="order.html" aria-label="Søk"><i class="fas fa-search"></i></a>
+        <a href="order.html" aria-label="Søk på reiser"
+          ><i class="fas fa-search"></i
+        ></a>
         <nav>
-          <a href="#">Opprett en konto</a>
-          <a href="#"><i class="far fa-user-circle"></i> Min side</a>
+          <a href="#" aria-label="Opprett brukerkonto">Opprett en konto</a>
+          <a href="#" aria-label="Gå til min side"
+            ><i class="far fa-user-circle"></i> Min side</a
+          >
         </nav>
       </section>
       <section>
-        <a href="index.html">
+        <a href="index.html" aria-label="Gå til forsiden">
           <img src="img/fav.png" alt="Logo for reisebyrå" />
         </a>
         <nav>
-          <a href="#">Tips og inspirasjon</a>
-          <a href="hotell.html">Hotell</a>
-          <a href="https://www.norwegian.no" target="_blank">Fly</a>
-          <a href="#">Kontakt</a>
+          <a href="#tips-og-inspirasjon" aria-label="Gå til tips og inspirasjon"
+            >Tips og inspirasjon</a
+          >
+          <a href="hotell.html" aria-label="Se våre hoteller">Hotell</a>
+          <a
+            href="https://www.norwegian.no"
+            target="_blank"
+            aria-label="Bestille fly hos Norwegian - åpnes i ny fane"
+            >Fly</a
+          >
+          <a href="#footer" aria-label="Gå til kontaktinformasjon">Kontakt</a>
         </nav>
       </section>
     </header>
 
     <main>
-      <form>
-        <nav>
-          <a href="#" class="active"
-            ><i class="fas fa-suitcase"></i> Fly + Hotell</a
+      <form action="#" method="get" aria-label="Søk etter reiseopplevelser">
+        <nav aria-label="Reisetype-valger">
+          <a href="#" class="active" aria-current="page"
+            ><i class="fas fa-suitcase" aria-hidden="true"></i> Fly + Hotell</a
           >
-          <a href="#"><i class="fas fa-plane"></i> Fly</a>
-          <a href="#"><i class="fa-solid fa-city"></i> Storby</a>
-          <a href="#"><i class="fas fa-skiing"></i> Ski</a>
+          <a href="#"><i class="fas fa-plane" aria-hidden="true"></i> Fly</a>
           <a href="#"
-            ><i class="fa-solid fa-map-location"></i>Kombinasjonsreiser</a
+            ><i class="fa-solid fa-city" aria-hidden="true"></i> Storby</a
+          >
+          <a href="#"><i class="fas fa-skiing" aria-hidden="true"></i> Ski</a>
+          <a href="#"
+            ><i class="fa-solid fa-map-location" aria-hidden="true"></i
+            >Kombinasjonsreiser</a
           >
         </nav>
-        <br />
 
-        <section>
-          <label>
-            Fra
-            <select>
-              <option value="oslo">Oslo Lufthavn</option>
-              <option value="torp">Torp Sandefjord Lufthavn</option>
-              <option value="bergen">Bergen Lufthavn</option>
-              <option value="alta">Alta Lufthavn</option>
-            </select>
-          </label>
-          <label>
-            Til
-            <select>
-              <option value="albania" selected>Albania</option>
-              <option value="danmark" selected>Danmark</option>
-              <option value="finland" selected>Finland</option>
-              <option value="hellas" selected>Hellas</option>
-            </select>
-          </label>
-          <label>
-            Reiselengde
-            <select>
-              <option value="mindre enn 1 uke" selected>
-                Mindre enn 1 uke
-              </option>
-              <option value="1 uke" selected>1 uke</option>
-              <option value="2 uker" selected>2 uker</option>
-              <option value="mer enn 2 uker" selected>Mer enn 2 uker</option>
-            </select>
-          </label>
-          <label>
-            Velg dato
-            <input type="date" placeholder="mm/dd/yyyy" />
-          </label>
-          <label>
-            Antall reisende
-            <input type="number" value="2" min="1" />
-          </label>
-          <button type="submit">Søk</button>
+        <section aria-label="Reisesøk">
+          <label for="fra">Fra</label>
+          <select id="fra" name="fra" required>
+            <option value="oslo">Oslo Lufthavn</option>
+            <option value="torp">Torp Sandefjord Lufthavn</option>
+            <option value="bergen">Bergen Lufthavn</option>
+            <option value="alta">Alta Lufthavn</option>
+          </select>
+
+          <label for="til"> Til</label>
+          <select id="til" name="til" required>
+            <option value="albania" selected>Albania</option>
+            <option value="danmark" selected>Danmark</option>
+            <option value="finland" selected>Finland</option>
+            <option value="hellas" selected>Hellas</option>
+          </select>
+
+          <label for="Reiselengde">Reiselengde</label>
+          <select id="Reiselengde" name="Reiselengde" required>
+            <option value="mindre_enn_1_uke" selected>Mindre enn 1 uke</option>
+            <option value="1_uke">1 uke</option>
+            <option value="2_uker">2 uker</option>
+            <option value="mer_enn_2_uker">Mer enn 2 uker</option>
+          </select>
+
+          <label for="dato">Velg dato</label>
+          <input type="date" id="dato" name="dato" required />
+
+          <label for="antall">Antall reisende</label>
+          <input type="number" id="antall" name="antall" value="2" min="1" />
+
+          <button type="submit" aria-label="Søk etter reiser">Søk</button>
         </section>
       </form>
 
-      <section>
+      <section aria-label="Kampanje">
         <article>
-          <img
-            src="img/holiday-2733322_1280.jpg"
-            alt="Bildet av dame som bader i vannet i turkist hav"
-            width="700"
-            height="300"
-          />
-          <div>
-            <h1>Bestill sommerens beste uke</h1>
+          <figure>
+            <img
+              src="img/holiday-2733322_1280.jpg"
+              alt="Bildet av en dame bader i turkist hav med overvannsvillaer i bakgrunnen"
+              width="700"
+              height="300"
+            />
+          </figure>
+          <section class="kampanje-info">
+            <h2>Bestill sommerens beste uke</h2>
             <p>Fly + hotell, 7 dager</p>
-            <p>Fra 3 298,-</p>
-            <a href="#">Bestill i dag</a>
-          </div>
+            <p><strong> 3 298,-</strong></p>
+            <a href="hotell.html" aria-label="Bestill sommerens beste uke nå"
+              >Bestill i dag</a
+            >
+          </section>
         </article>
       </section>
 
-      <section>
+      <section aria-label="Aktuelle kampanjer">
         <article>
-          <a href="#">
-            <h2>Få eksklusive tilbud</h2>
+          <a
+            href="#"
+            aria-label="Få eksklusive tilbud - logg inn/opprett konto og få rabattkoder"
+          >
+            <h3>Få eksklusive tilbud</h3>
             <p>
               Logg inn/opprett konto og få rabattkoder
-              <i class="fas fa-chevron-double-right"></i>
+              <i class="fas fa-chevron-double-right" aria-hidden="true"></i>
             </p>
           </a>
         </article>
 
         <article>
-          <a href="#">
-            <h2>Billige resteplasser</h2>
-            <p>Opptil 50% rabatt <i class="fas fa-chevron-double-right"></i></p>
+          <a href="#" aria-label="Billige resteplasser - opptil 50% rabatt">
+            <h3>Billige resteplasser</h3>
+            <p>
+              Opptil 50% rabatt
+              <i class="fas fa-chevron-double-right" aria-hidden="true"></i>
+            </p>
           </a>
         </article>
 
         <article>
-          <a href="#">
-            <h2>Mars - spar opptil 5000,-</h2>
+          <a href="#" aria-label="Mars - spar opptil 5000,-">
+            <h3>Mars - spar opptil 5000,-</h3>
             <p>
               Sikre deg et ferie kupp
-              <i class="fas fa-chevron-double-right"></i>
+              <i class="fas fa-chevron-double-right" aria-hidden="true"></i>
             </p>
           </a>
         </article>
